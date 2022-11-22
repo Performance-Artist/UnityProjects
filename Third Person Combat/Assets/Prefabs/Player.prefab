@@ -901,6 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c14cd4e85301c41b47f103bbcc1075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cineTargetGroup: {fileID: 0}
 --- !u!135 &8406541542403993553
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2780,8 +2781,11 @@ MonoBehaviour:
   <Controller>k__BackingField: {fileID: 5645713533487234111}
   <Animator>k__BackingField: {fileID: 4943269390319702819}
   <Targeter>k__BackingField: {fileID: 3887220636611226812}
+  <ForceReceiver>k__BackingField: {fileID: 0}
   <FreeLookMovementSpeed>k__BackingField: 6
+  <TargetingMovementSpeed>k__BackingField: 0
   <RotationDamping>k__BackingField: 0
+  <Attacks>k__BackingField: []
 --- !u!95 &4943269390319702819
 Animator:
   serializedVersion: 4
