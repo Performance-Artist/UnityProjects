@@ -57,9 +57,7 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 7544087603647908674}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras:
-  - {fileID: 7757503128470861506}
-  - {fileID: 6278274576130918422}
+  m_ChildCameras: []
   m_Instructions:
   - m_FullHash: 585382737
     m_VirtualCamera: {fileID: 7757503128470861506}
@@ -1649,8 +1647,36 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: <TargetingMovementSpeed>k__BackingField
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[0].<AnimationCode>k__BackingField
+      value: Attack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[0].<AnimationName>k__BackingField
+      value: Attack1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[1].<AnimationCode>k__BackingField
+      value: Attack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[1].<AnimationName>k__BackingField
+      value: Attack2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[2].<AnimationCode>k__BackingField
+      value: Attack3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[2].<AnimationName>k__BackingField
+      value: Attack3
       objectReference: {fileID: 0}
     - target: {fileID: 6484713472987736804, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
