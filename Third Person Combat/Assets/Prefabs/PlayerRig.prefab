@@ -57,7 +57,9 @@ MonoBehaviour:
   m_AnimatedTarget: {fileID: 7544087603647908674}
   m_LayerIndex: 0
   m_ShowDebugText: 0
-  m_ChildCameras: []
+  m_ChildCameras:
+  - {fileID: 7757503128470861506}
+  - {fileID: 6278274576130918422}
   m_Instructions:
   - m_FullHash: 585382737
     m_VirtualCamera: {fileID: 7757503128470861506}
@@ -86,6 +88,14 @@ MonoBehaviour:
     m_ParentHash: 585382737
   - m_Hash: -479991077
     m_ParentHash: 756556552
+  - m_Hash: 168036699
+    m_ParentHash: -479991077
+  - m_Hash: 641460239
+    m_ParentHash: -479991077
+  - m_Hash: 1972345908
+    m_ParentHash: -479991077
+  - m_Hash: 1909800350
+    m_ParentHash: -479991077
 --- !u!1 &173359995016543014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,7 +1794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239931799168314130, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1603982
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8239931799168314130, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: m_LocalPosition.z
