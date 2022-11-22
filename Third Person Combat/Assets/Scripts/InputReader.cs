@@ -2,77 +2,57 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.AI;
 
-public class InputReader : MonoBehaviour, Controls.IPlayerActions
+public class ForceReceiver : MonoBehaviour
 {
-    public Vector2 MovementValue { get; private set; }
-    public bool IsAttacking { get; private set; }
-    public event Action JumpEvent;
-    public event Action DodgeEvent;
-    public event Action TargetEvent;
-    public event Action CancelEvent;
-    
-    private Controls controls;
-    
-    private void Start()
-    {
-        controls = new Controls();
-        controls.Player.SetCallbacks(this);
-        
-        controls.Player.Enable();
-    }
+    [SerializeField] private CharacterController controller;
+    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private float drag = 0.3f;
 
-    private void OnDestroy()
-    {
-        controls.Player.Disable();
-    }
-    
-    public void OnJump(InputAction.CallbackContext context)
-    {
-        if (context.performed) { return; }
-        JumpEvent?.Invoke();
-    }
+    private Vector3 dampingVelocity;
+    private Vector3 impact;
+    private float verticalVelocity;
 
-    public void OnDodge(InputAction.CallbackContext context)
+    public Vector3 Movement => impact + Vector3.up * verticalVelocity;
+
+    private void Update()
     {
-        if (context.performed) { return; }
-        DodgeEvent?.Invoke();
-    }
-
-    public void OnMove(InputAction.CallbackContext context)
-    {
-        MovementValue = context.ReadValue<Vector2>();
-    }
-
-    public void OnLook(InputAction.CallbackContext context)
-    {
-        
-    }
-
-    public void OnTarget(InputAction.CallbackContext context)
-    {
-        if (!context.performed) { return; }
-
-        TargetEvent?.Invoke();
-    }
-
-    public void OnCancel(InputAction.CallbackContext context)
-    {
-        if (!context.performed) { return; }
-
-        CancelEvent?.Invoke();
-    }
-
-    public void OnAttack(InputAction.CallbackContext context)
-    {
-        if (context.performed)
+        if (verticalVelocity < 0f && controller.isGrounded)
         {
-            IsAttacking = true;
+            verticalVelocity = Physics.gravity.y * Time.deltaTime;
         }
-        else if (context.canceled)
+        else
         {
-            IsAttacking = false;
+            verticalVelocity += Physics.gravity.y * Time.deltaTime;
+        }
+
+        impact = Vector3.SmoothDamp(impact, Vector3.zero, ref dampingVelocity, drag);
+
+        if (agent != null)
+        {
+            if (impact.sqrMagnitude < 0.2f * 0.2f)
+            {
+                impact = Vector3.zero;
+                agent.enabled = true;
+            }
+        }
+    }
+
+    public void Reset()
+    {
+        impact = Vector3.zero;
+        verticalVelocity = 0f;
+    }
+
+    public void AddForce(Vector3 force)
+    {
+        impact += force;
+        if (agent != null)
+        {
+            agent.enabled = false;
         }
     }
 }
+
+
