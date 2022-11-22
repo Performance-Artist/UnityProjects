@@ -1720,6 +1720,10 @@ PrefabInstance:
       value: -14.319309
       objectReference: {fileID: 0}
     - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Weapon>k__BackingField
+      value: 
+      objectReference: {fileID: 5083122766305235601}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: <ForceReceiver>k__BackingField
       value: 
       objectReference: {fileID: 8479674384158923598}
@@ -1730,6 +1734,18 @@ PrefabInstance:
     - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: <TargetingMovementSpeed>k__BackingField
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[0].<Damage>k__BackingField
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[1].<Damage>k__BackingField
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[2].<Damage>k__BackingField
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: <Attacks>k__BackingField.Array.data[0].<AnimationCode>k__BackingField
