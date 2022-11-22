@@ -1736,6 +1736,18 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[0].<Force>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[1].<Force>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
+      propertyPath: <Attacks>k__BackingField.Array.data[2].<Force>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6475370335497442813, guid: 18d2a45b9549e3f438dd3238b718b9c5, type: 3}
       propertyPath: <Attacks>k__BackingField.Array.data[0].<Damage>k__BackingField
       value: 10
       objectReference: {fileID: 0}
